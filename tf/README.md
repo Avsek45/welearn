@@ -5,37 +5,9 @@
 
 ***
 
-## Pre requesite
+To create multiple EC2 instances with Terraform, follow these steps:
 
-Before we begin, please make sure you have the following:
-
-- An AWS account
-- AWS CLI installed on your computer
-- Terraform installed on your computer
-- An SSH key pair (you can create one with the ssh-keygen command)
-- With that out of the way, let's get started:
-
-1. ### Create an IAM user with programmatic access
-   - In order to use Terraform with your AWS account, you'll need to create an IAM user with programmatic access. Here's how to do it:
-    - Log in to the AWS Management Console and navigate to the IAM service.
-    - Click on "Users" and then "Add user".
-    - Give your user a name and select "Programmatic access" as the access type.
-    - Attach an existing policy or create a custom one that grants your user permissions to create and manage EC2 instances.
-    - Review your settings and create the user.
-    - Once you've created the user, make sure to save the access key and secret key that are generated. You'll need these later.
-
-2. Configure AWS CLI
-  - In order to use Terraform with your AWS account, you'll need to configure the AWS CLI with the access key and secret key you just created. Here's how to do it:
-    - Open a terminal and run the following command: aws configure.
-    - Enter the access key and secret key when prompted.
-    Set the default region to the region where you want to create your EC2 - instance.
-    - Leave the output format as the default (JSON).
-    - Create a Terraform configuration file
-
-Now it's time to create a Terraform configuration file that will define the resources you want to create. Here's an example:To create multiple EC2 instances with Terraform, follow these steps:
-
----
-Create a new directory for your Terraform project
+Create a new directory for your Terraform project.
 
 ```
 mkdir terraform-ec2-instances
